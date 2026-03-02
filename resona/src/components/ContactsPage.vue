@@ -2,7 +2,7 @@
 
 <template>
 
-<body>
+<body class="app-container">
     <header>
         <h3 class="rubik">contact</h3>
     </header>
@@ -29,7 +29,6 @@
 
 <style lang="scss" scoped>
 #tv {
-    display: grid;
     grid-column: span 2;
     justify-self: center;
     width: 350px;
@@ -38,11 +37,11 @@
 
 #title {
     font-weight: 600px;
+    
 }
 
 footer {
     grid-column: span 2;
-    text-align: center;
     margin-top: 10px;
     background-color: #8f0410;
 }
@@ -51,4 +50,10 @@ a, p {
     color: white;
     text-decoration: none;
 }
+
+#ig {
+    
+}
+
+
 </style>

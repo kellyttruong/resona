@@ -2,7 +2,7 @@
 
 <template>
   
-   <body>
+   <body class="app-container">
     <header>
         <h3 class="rubik">partners</h3>
     </header>
