@@ -29,10 +29,12 @@
 
 <style lang="scss" scoped>
 #tv {
+    display: grid;
     grid-column: span 2;
-    text-align: center;
-    width: 300px;
+    justify-self: center;
+    width: 350px;
 }
+
 
 #title {
     font-weight: 600px;
