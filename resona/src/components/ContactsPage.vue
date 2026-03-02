@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+    
     <header>
         <h3 class="rubik">contact</h3>
     </header>
@@ -31,8 +32,8 @@
 <style lang="scss" scoped>
 
 h3 {
-    padding-right: 50px;
-    padding-bottom: 30px;
+    // padding-right: 50px;
+    // padding-bottom: 30px;
 }
 
 #tv {
@@ -44,7 +45,10 @@ h3 {
 }
 
 #title {
-    font-weight: 600px;
+    font-weight: bold;
+}
+a.lexend {
+    font-weight: 250;
 }
 
 footer {
