@@ -4,9 +4,9 @@
 
     <body class="app-container">
         <header>
-            <img></img>
+            <img src="" alt="logo">
             <nav>
-                <img></img>
+                <img src="../assets/ham menu 2.png" alt id="ham-menu">
             </nav>
         </header>
         <div class="title">
@@ -32,27 +32,60 @@
 </template>
 
 <style lang="scss" scoped>
+header {
+    grid-column: span 2;
+    text-align: center;
+}
+
+#ham-menu {
+    width: 40px;
+}
+
 .title {
     grid-column: span 2;
     text-align: center;
 }
 
+.title h1 {
+    background: -webkit-radial-gradient(#D21436, #8C030E, #D21436);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+}
+
 .title h3 {
     font-weight: 800;
     color: #8C030E;
+    font-size: 20px;
 }
 
 .mission {
     grid-column: span 2;
     text-align: center;
     background-color: #260104;
-    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
 }
 
 .vision {
     grid-column: span 2;
     text-align: center;
     background-color: #40010D;
-    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
 }
+
+.mission h3, .vision h3 {
+    color: white;
+    margin-top: 30px;
+}
+
+.mission p, .vision p {
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+   
 </style>
