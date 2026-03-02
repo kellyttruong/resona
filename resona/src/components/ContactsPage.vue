@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    
+
     <header>
         <h3 class="rubik">contact</h3>
     </header>
@@ -67,6 +67,7 @@ a, p {
     grid-row: 2;
     grid-column: 2;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #ig {
