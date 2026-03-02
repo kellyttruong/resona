@@ -1,13 +1,14 @@
 <script setup></script>
 
 <template>
-
-<body class="app-container">
     <header>
         <h3 class="rubik">contact</h3>
     </header>
-    <img src="../assets/television.png" alt id="tv"><video src=""></video>
-    <footer>
+
+<div class="app-container">
+    <img id="tv" src="../assets/television.png" alt=""> <!-- <video src=""></video> /-->
+</div>
+    <footer class="app-container">
         <a href=""><img src="../assets/ig-logo.png" alt id="ig"></a>
         <div class="help">
             <p class="lexend" id="title">Helpful Links</p>
@@ -21,26 +22,33 @@
             <br>
             <a href="https://www.figma.com/design/h0LYGmI8g1IcsFRQilUHML/Capython-2026?node-id=0-1&t=8Ysswi7g8F5GYdgE-1" class="lexend">Figma</a>
         </div>
-        <p class="lexend">&copy;2026 Resona</p>
+        <img src="" alt id="logo">
+        <p class="lexend" id="copy">&copy;2026 Resona</p>
     </footer>
-</body>
 
 </template>
 
 <style lang="scss" scoped>
-#tv {
-    grid-column: span 2;
-    justify-self: center;
-    width: 350px;
+
+h3 {
+    padding-right: 50px;
+    padding-bottom: 30px;
 }
 
+#tv {
+    grid-column: span 3;
+    justify-self: center;
+    width: 550px;
+    max-width: 100%;
+    padding: 50px;
+}
 
 #title {
     font-weight: 600px;
-    
 }
 
 footer {
+    
     grid-column: span 2;
     margin-top: 10px;
     background-color: #8f0410;
@@ -51,8 +59,29 @@ a, p {
     text-decoration: none;
 }
 
+#copy {
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+}
+
 #ig {
-    
+    margin: 20px;
+}
+
+div .help {
+    margin: 20px;
+    text-align: right;
+}
+
+div .about {
+    margin: 20px;
+    text-align: right;
+}
+.app-container {
+    height: auto;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 
