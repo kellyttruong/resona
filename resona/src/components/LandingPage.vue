@@ -4,7 +4,7 @@
 
     <body class="app-container">
         <header class="navi">
-            <img src="" alt="logo">
+            <img src="" alt id="logo">
             <nav>
                 <img src="../assets/ham menu 2.png" alt id="ham-menu">
             </nav>
@@ -34,11 +34,12 @@
 <style lang="scss" scoped>
 .app-container {
     height: auto;
+    grid-template-rows: 1fr;
+    margin-bottom: 30px;
 }
 
-header {
-    grid-column: span 2;
-    text-align: center;
+#logo {
+    grid-column: 1;
 }
 
 #ham-menu {
@@ -48,6 +49,7 @@ header {
 .title {
     grid-column: span 2;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .title h1 {
@@ -70,6 +72,7 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 20px;
+    padding: 8px;
 }
 
 .vision {
@@ -79,12 +82,13 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 20px;
+    padding: 8px;
 }
 
 .mission h3,
 .vision h3 {
     color: white;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .mission p,
