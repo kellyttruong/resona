@@ -3,7 +3,7 @@
 <template>
 
     <body class="app-container">
-        <header>
+        <header class="navi">
             <img src="" alt="logo">
             <nav>
                 <img src="../assets/ham menu 2.png" alt id="ham-menu">
@@ -32,6 +32,10 @@
 </template>
 
 <style lang="scss" scoped>
+.app-container {
+    height: auto;
+}
+
 header {
     grid-column: span 2;
     text-align: center;
@@ -77,15 +81,16 @@ header {
     border-radius: 20px;
 }
 
-.mission h3, .vision h3 {
+.mission h3,
+.vision h3 {
     color: white;
     margin-top: 30px;
 }
 
-.mission p, .vision p {
+.mission p,
+.vision p {
     color: white;
     margin-top: 10px;
     padding: 10px;
 }
-   
 </style>
