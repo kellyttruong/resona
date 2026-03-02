@@ -17,6 +17,11 @@
 </template>
 
 <style lang="scss" scoped>
+.app-container {
+    grid-template-rows: 1fr;
+    height: auto;
+}
+
 div {
     grid-column: span 2;
     text-align: center;
