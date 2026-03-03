@@ -29,8 +29,8 @@ div {
     margin-top: 30px;
 }
 
-div:hover img {
-    transform: scale(1.08);
+a:hover img {
+    transform: scale(1.2);
 }
 
 #mlo {

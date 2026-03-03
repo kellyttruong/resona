@@ -14,8 +14,6 @@
             <p id="task" class="lexend">Resona web design and coding</p>
           </span>
         </div>
-    </div>
-      <!-- <div class="carousel-track">
         <div class="inner">
           <p id="name" class="lexend">Kelly</p>
           <p id="role" class="lexend">Graphic Designer, Coder</p>
@@ -23,7 +21,49 @@
             <p id="task" class="lexend">BPM logo, Resona Website</p>
           </span>
         </div>
-    </div> -->
+        <div class="inner">
+          <p id="name" class="lexend">Ray</p>
+          <p id="role" class="lexend">Web Designer, Coder</p>
+          <span>
+            <p id="task" class="lexend">Resona web design and coding</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Ray</p>
+          <p id="role" class="lexend">Web Designer, Coder</p>
+          <span>
+            <p id="task" class="lexend">Resona web design and coding</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Ray</p>
+          <p id="role" class="lexend">Web Designer, Coder</p>
+          <span>
+            <p id="task" class="lexend">Resona web design and coding</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Ray</p>
+          <p id="role" class="lexend">Web Designer, Coder</p>
+          <span>
+            <p id="task" class="lexend">Resona web design and coding</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Ray</p>
+          <p id="role" class="lexend">Web Designer, Coder</p>
+          <span>
+            <p id="task" class="lexend">Resona web design and coding</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Ray</p>
+          <p id="role" class="lexend">Web Designer, Coder</p>
+          <span>
+            <p id="task" class="lexend">Resona web design and coding</p>
+          </span>
+        </div>
+    </div>
     <div class="carousel-nav">
         <button class="lexend"><</button>
         <button class="lexend">></button>
@@ -36,6 +76,7 @@
 .app-container {
     height: auto;
     grid-template-rows: 1fr;
+    margin-bottom: 30px;
 }
 
 div {
@@ -69,10 +110,21 @@ p {
 }
 
 .carousel-nav button {
-    border-radius: 20px;
-    padding: 5px;
-    background: radial-gradient(#D21436, #8C030E, #D21436);
-    color: white;
-    margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  background: #8F0410;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+
+  background-image: 
+    linear-gradient(#8f0410, #8F0410),
+    radial-gradient(#D21436, #8C030E, #D21436);
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  box-shadow: 0 0 12px rgba(143, 4, 16);
 }
 </style>
