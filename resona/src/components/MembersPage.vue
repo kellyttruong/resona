@@ -15,6 +15,15 @@
           </span>
         </div>
     </div>
+      <!-- <div class="carousel-track">
+        <div class="inner">
+          <p id="name" class="lexend">Kelly</p>
+          <p id="role" class="lexend">Graphic Designer, Coder</p>
+          <span>
+            <p id="task" class="lexend">BPM logo, Resona Website</p>
+          </span>
+        </div>
+    </div> -->
     <div class="carousel-nav">
         <button class="lexend"><</button>
         <button class="lexend">></button>
@@ -36,6 +45,8 @@ div {
 }
 
 #name {
+  display: grid;
+  align-items: center;
   background-color: #260104;
   border-radius: 20px;
   color: white;
@@ -44,6 +55,8 @@ div {
 }
 
 #role {
+  display: grid;
+  align-items: center;
   background-color: #8F0410;
   border-radius: 20px;
   color: white;

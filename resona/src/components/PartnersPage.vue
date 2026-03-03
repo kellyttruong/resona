@@ -25,6 +25,7 @@
 div {
     grid-column: span 2;
     text-align: center;
+    justify-self: center;
     margin-top: 30px;
 }
 

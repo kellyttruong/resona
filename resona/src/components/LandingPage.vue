@@ -3,8 +3,8 @@
 <template>
 
     <body class="app-container">
+        <img src="../assets/Artboard 1.png" alt id="logo">
         <header class="navi">
-            <img src="" alt id="logo">
             <nav>
                 <img src="../assets/ham menu 2.png" alt id="ham-menu">
             </nav>
@@ -40,10 +40,14 @@
 
 #logo {
     grid-column: 1;
+    grid-row: 1;
+    width: 200px;
 }
 
 #ham-menu {
     width: 40px;
+    grid-column: 2;
+    margin-top: 25px;
 }
 
 .title {
