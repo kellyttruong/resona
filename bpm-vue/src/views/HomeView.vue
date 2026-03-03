@@ -5,7 +5,7 @@ import LineupPage from '@/components/LineupPage.vue'
 </script>
 
 <template>
-  <LandingPage />
-  <LineupPage />
-  <AnnouncementBanner />
+  <LandingPage id="home" />
+  <LineupPage id="lineup" />
+  <AnnouncementBanner id="announcement" />
 </template>
