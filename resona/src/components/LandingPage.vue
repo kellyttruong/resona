@@ -101,4 +101,38 @@
     margin-top: 10px;
     padding: 10px;
 }
+
+@media screen and (min-width: 1080px) {
+    .app-container {
+        height: auto;
+    }
+    .title {
+        grid-column: span 5;
+    }
+    .title h1 {
+        font-size: 100px;
+    }
+    .title h3 {
+        font-size: 40px;
+    }
+    .navi {
+        grid-column: 5;
+        justify-self: right;
+    }
+    #logo {
+        width: 300px;
+    }
+    .mission {
+        grid-column: 2;
+    }
+    .vision {
+        grid-column: 4;
+    }
+    .mission h3, .vision h3 {
+        font-size: 30px;
+    }
+    .mission p, .vision p {
+        font-size: 15px;
+    }
+}
 </style>

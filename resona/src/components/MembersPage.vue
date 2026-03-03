@@ -5,34 +5,34 @@
 // const current = ref(0)
 
 // function updateCarousel() {
-//   inner.value.forEach(card => {
-//     card.classList.remove("active", "layer-1", "layer-2", "layer-3")
-//   })
+// inner.value.forEach(inner => {
+// inner.classList.remove("active", "layer-1", "layer-2", "layer-3")
+// })
 
-//   const total = inner.value.length
+// const total = inner.value.length
 
-//   if (!total) return
+// if (!total) return
 
-//   inner.value[current.value]?.classList.add("active")
-//   inner.value[(current.value + 1) % total]?.classList.add("layer-1")
-//   inner.value[(current.value + 2) % total]?.classList.add("layer-2")
-//   inner.value[(current.value + 3) % total]?.classList.add("layer-3")
+// inner.value[current.value]?.classList.add("active")
+// inner.value[(current.value + 1) % total]?.classList.add("layer-1")
+// inner.value[(current.value + 2) % total]?.classList.add("layer-2")
+// inner.value[(current.value + 3) % total]?.classList.add("layer-3")
 // }
 
 // function next() {
-//   current.value = (current.value + 1) % inner.value.length
-//   updateCarousel()
+// current.value = (current.value + 1) % inner.value.length
+// updateCarousel()
 // }
 
 // function prev() {
-//   current.value =
-//     (current.value - 1 + inner.value.length) % inner.value.length
-//   updateCarousel()
+// current.value =
+// (current.value - 1 + inner.value.length) % inner.value.length
+// updateCarousel()
 // }
 
 // onMounted(() => {
-//   inner.value = document.querySelectorAll(".inner")
-//   updateCarousel()
+// inner.value = document.querySelectorAll(".inner")
+// updateCarousel()
 // }) 
 </script>
 
