@@ -16,7 +16,7 @@
         
         <div class="help">
             <p class="lexend" id="title">Helpful Links</p>
-            <a href="" class="lexend">BPM festival</a>
+            <a href="https://bpm.capython.com/" class="lexend">BPM festival</a>
             <br>
             <a href="" class="lexend">Presentation</a>
         </div>

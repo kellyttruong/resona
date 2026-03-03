@@ -16,7 +16,7 @@
     </section>
     <section class="buttons">
       <button>2026 Tickets</button>
-      <button>Full Lineup</button>
+      <a href="#lineup">Full Lineup</a>
     </section>
   </main>
 </template>

@@ -10,7 +10,7 @@
         <a href="https://582multi.media/"><img src="../assets/symbol_582_w.png" alt id="mlo"></a>
     </div>
     <div class="bpm">
-        <a href=""><img src="../assets/white.png" alt id="blo"></a>
+        <a href="https://bpm.capython.com/"><img src="../assets/white.png" alt id="blo"></a>
     </div>
    </body>
 

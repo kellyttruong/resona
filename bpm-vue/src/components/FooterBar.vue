@@ -1,11 +1,15 @@
-<script setup></script>
+<script setup>
+
+const goToWebsite = () => {
+  window.location.href = "https://resona.capython.com/";
+};
+</script>
 
 <template>
 <main class="app-container">
     <section class="links glass">
         <p>Lineup</p>
-        <p>Location</p>
-        <p>Powered by Resona</p>
+        <p @click="goToWebsite()">Powered by Resona</p>
     </section>
     <div class="img-container">
         <img src="../assets/white.png" alt="">

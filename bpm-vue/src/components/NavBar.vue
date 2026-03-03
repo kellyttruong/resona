@@ -31,6 +31,7 @@ const closeMenu = () => {
     <div class="links">
       <a href="#home" @click="closeMenu">Home</a>
       <a href="#lineup" @click="closeMenu">Lineup</a>
+      <a href="https://resona.capython.com/">Powered by Resona</a>
     </div>
   </nav>
 </template>
