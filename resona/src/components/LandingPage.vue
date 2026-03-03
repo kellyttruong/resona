@@ -1,32 +1,62 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+const isOpen = ref(false)
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value
+}
+
+const closeMenu = () => {
+  isOpen.value = false
+}
+</script>
 
 <template>
 
     <body class="app-container">
-        <img src="../assets/Artboard 1.png" alt id="logo">
-        <header class="navi">
-            <nav>
-                <img src="../assets/ham menu 2.png" alt id="ham-menu">
-            </nav>
-        </header>
-        <div class="title">
-            <h1 class="rubik">Resona</h1>
-            <h3 class="lexend"> Immersive, Audio-Reactive Experience</h3>
-        </div>
-        <div class="mission">
-            <h3 class="rubik">Our mission</h3>
-            <p class="lexend">Resona creates immersive, audio-reactive visuals and media that transform sound into
-                real-time
-                experiences.
-                We help events elevate their energy, engage audiences, and bring music to life through interactive
-                technology and design.</p>
-        </div>
-        <div class="vision">
-            <h3 class="rubik">Our vision</h3>
-            <p class="lexend">To redefine how people experience sound by becoming the global standard for audio-reactive
-                environments,
-                where every beat, frequency, and signal shapes a living, responsive world.</p>
-        </div>
+    <img src="../assets/Artboard 1.png" alt="" id="logo" />
+
+    <header class="navi">
+      <nav>
+        <img
+          src="../assets/ham menu 2.png"
+          alt=""
+          id="ham-menu"
+          @click="toggleMenu"
+        />
+      </nav>
+    </header>
+
+    <!-- FULLSCREEN MENU -->
+    <div class="fullscreen-menu" :class="{ active: isOpen }">
+      <button class="close-btn" @click="closeMenu">✕</button>
+      <ul>
+        <li><a class="lexend" href="#home" @click="closeMenu">Home</a></li>
+        <li><a class="lexend" href="#mission" @click="closeMenu">Our Mission</a></li>
+        <li><a class="lexend" href="#vision" @click="closeMenu">Our Vision</a></li>
+      </ul>
+    </div>
+
+    <div class="title" id="home">
+      <h1 class="rubik">Resona</h1>
+      <h3 class="lexend">Immersive, Audio-Reactive Experience</h3>
+    </div>
+
+    <div class="mission" id="mission">
+      <h3 class="rubik">Our mission</h3>
+      <p class="lexend">
+        Resona creates immersive, audio-reactive visuals and media that
+        transform sound into real-time experiences...
+      </p>
+    </div>
+
+    <div class="vision" id="vision">
+      <h3 class="rubik">Our vision</h3>
+      <p class="lexend">
+        To redefine how people experience sound by becoming the global standard...
+      </p>
+    </div>
     </body>
 
 </template>
@@ -47,8 +77,14 @@
 #ham-menu {
     width: 40px;
     grid-column: 2;
-    margin-top: 25px;
+    // margin-top: 25px;
 }
+
+.navi {
+        position: absolute;
+        top: 30px;
+  right: 40px;
+    }
 
 .title {
     grid-column: span 2;
@@ -115,10 +151,6 @@
     .title h3 {
         font-size: 40px;
     }
-    .navi {
-        grid-column: 5;
-        justify-self: right;
-    }
     #logo {
         width: 300px;
     }
@@ -134,5 +166,62 @@
     .mission p, .vision p {
         font-size: 15px;
     }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* FULLSCREEN OVERLAY */
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #260104;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+  z-index: 1000;
+}
+
+.fullscreen-menu.active {
+  transform: translateY(0);
+}
+
+.fullscreen-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.fullscreen-menu li {
+  margin: 30px 0;
+}
+
+.fullscreen-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.fullscreen-menu a:hover {
+  color: #D21436;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
 }
 </style>

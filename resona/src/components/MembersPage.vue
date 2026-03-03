@@ -1,183 +1,104 @@
 <script setup>
-// import { ref, onMounted } from "vue"
+import { ref, computed } from "vue";
 
-// const inner = ref([])
-// const current = ref(0)
+const members = [
+  { name: "Rafsun", role: "Touch Designer", task: "Stage Visuals, Wayfinding and Ticketing Strategy" },
+  { name: "Tyler", role: "Web Designer, Coder, Visual Creator", task: "BPM Web Design and Coding, Crowd Live Visualizer" },
+  { name: "Ann", role: "Graphic Designer, Video Editor", task: "BPM poster, Presentation Vid" },
+  { name: "Remi", role: "Social Media, Video Editor", task: "Insta Post, Presentation Vid" },
+  { name: "Kaisen", role: "Graphic Designer", task: "Resona logo" },
+  { name: "Ibrahim", role: "Touch Designer", task: "Live Visuals" },
+  { name: "Kelly", role: "Graphic Designer, Coder", task: "BPM logo, Resona Website" },
+  { name: "Ray", role: "Web Designer, Coder", task: "Resona Web Design and Coding" }
+];
 
-// function updateCarousel() {
-// inner.value.forEach(inner => {
-// inner.classList.remove("active", "layer-1", "layer-2", "layer-3")
-// })
+const currentIndex = ref(0);
+const currentMember = computed(() => members[currentIndex.value]);
 
-// const total = inner.value.length
+const next = () => {
+  currentIndex.value = (currentIndex.value + 1) % members.length;
+};
 
-// if (!total) return
-
-// inner.value[current.value]?.classList.add("active")
-// inner.value[(current.value + 1) % total]?.classList.add("layer-1")
-// inner.value[(current.value + 2) % total]?.classList.add("layer-2")
-// inner.value[(current.value + 3) % total]?.classList.add("layer-3")
-// }
-
-// function next() {
-// current.value = (current.value + 1) % inner.value.length
-// updateCarousel()
-// }
-
-// function prev() {
-// current.value =
-// (current.value - 1 + inner.value.length) % inner.value.length
-// updateCarousel()
-// }
-
-// onMounted(() => {
-// inner.value = document.querySelectorAll(".inner")
-// updateCarousel()
-// }) 
+const prev = () => {
+  currentIndex.value = (currentIndex.value - 1 + members.length) % members.length;
+};
 </script>
 
 <template>
-
-  <body class="app-container">
+  <div class="app-container">
     <header>
-        <h3 class="rubik">members</h3>
+      <h3 class="rubik">members</h3>
     </header>
-    <div class="carousel">
-        <div class="inner">
-          <p id="name" class="lexend">Rafsun</p>
-          <p id="role" class="lexend">Touch Designer</p>
-          <span>
-            <p id="task" class="lexend">Stage Visuals, Wayfinding and Ticketing Strategy</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Tyler</p>
-          <p id="role" class="lexend">Web Designer, Coder, Visual Creator</p>
-          <span>
-            <p id="task" class="lexend">BPM Web Design and Coding, Crowd Live Visualizer </p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Ann</p>
-          <p id="role" class="lexend">Graphic Designer, Video Editor</p>
-          <span>
-            <p id="task" class="lexend">BPM poster, Presentation Vid</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Remi</p>
-          <p id="role" class="lexend">Social Media Spokesperson, Video Editor</p>
-          <span>
-            <p id="task" class="lexend">Insta Post, Presentation Vid</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Kaisen</p>
-          <p id="role" class="lexend">Graphic Designer</p>
-          <span>
-            <p id="task" class="lexend">Resona logo</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Ibrahim</p>
-          <p id="role" class="lexend">Touch Designer</p>
-          <span>
-            <p id="task" class="lexend">Live Visuals</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Kelly</p>
-          <p id="role" class="lexend">Graphic Designer, Coder</p>
-          <span>
-            <p id="task" class="lexend">BPM logo, Resona Website</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Ray</p>
-          <p id="role" class="lexend">Web Designer, Coder</p>
-          <span>
-            <p id="task" class="lexend">Resona Web Design and Coding</p>
-          </span>
-        </div>
-    </div>
-    <div class="carousel-nav">
-        <button class="lexend" @click="prev"><</button>
-        <button class="lexend" @click="next">></button>
-    </div>
-  </body>
 
+    <div class="carousel">
+      <div class="inner">
+        <p class="name lexend">{{ currentMember.name }}</p>
+        <p class="role lexend">{{ currentMember.role }}</p>
+        <p class="task lexend">{{ currentMember.task }}</p>
+      </div>
+    </div>
+
+    <div class="carousel-nav">
+      <button class="lexend" @click="prev"><</button>
+      <button class="lexend" @click="next">></button>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .app-container {
-    height: auto;
-    grid-template-rows: 1fr;
-    margin-bottom: 30px;
-}
-
-div {
-    grid-column: span 2;
-    text-align: center;
-    justify-items: center;
-}
-
-// .carousel {
-//   position: relative;
-// }
-
-// .inner {
-//   position: absolute;
-// }
-
-// .active {
-//   transform: translateX(0) scale(1);
-//   z-index: 4;
-//   opacity: 1;
-// }
-
-// .layer-1 {
-//   transform: translateX(-25px) scale(0.96);
-//   z-index: 3;
-//   opacity: 1;
-// }
-
-// .layer-2 {
-//   transform: translateX(-50px) scale(0.92);
-//   z-index: 2;
-//   opacity: 1;
-// }
-
-// .layer-3 {
-//   transform: translateX(-75px) scale(0.88);
-//   z-index: 1;
-//   opacity: 1;
-// }
-
-#name {
   display: grid;
-  align-items: center;
-  background-color: #260104;
-  border-radius: 20px;
-  color: white;
-   width: 300px;
-  height: 100px;
+  justify-items: center;
+  margin-bottom: 30px;
 }
 
-#role {
+.carousel {
   display: grid;
-  align-items: center;
-  background-color: #8F0410;
+  grid-column: span 2;
+  place-items: center;
+  margin: 30px 0;
+}
+
+.inner {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+}
+
+.name,
+.role {
+  display: grid;
+  place-items: center;
   border-radius: 20px;
   color: white;
   width: 300px;
   height: 100px;
 }
 
-p {
-    padding: 10px;
+.name {
+  background-color: #260104;
+}
+
+.role {
+  background-color: #8F0410;
+}
+
+.task {
+  color: white;
+  text-align: center;
+  max-width: 400px;
+}
+
+.carousel-nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-row: 4;
+  grid-column: span 2;
+  gap: 20px;
 }
 
 .carousel-nav button {
+  height: max-content;
   padding: 15px;
   font-size: 16px;
   color: white;
@@ -194,5 +115,14 @@ p {
   background-clip: padding-box, border-box;
 
   box-shadow: 0 0 12px rgba(143, 4, 16);
+}
+
+@media screen and (min-width: 1080px) {
+  .carousel, .carousel-nav {
+    grid-column: 2 / span 3;
+  }
+  .carousel-nav {
+    grid-row: 3;
+  }
 }
 </style>
