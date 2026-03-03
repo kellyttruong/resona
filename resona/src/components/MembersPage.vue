@@ -1,4 +1,40 @@
-<script setup></script>
+<script setup>
+// import { ref, onMounted } from "vue"
+
+// const inner = ref([])
+// const current = ref(0)
+
+// function updateCarousel() {
+//   inner.value.forEach(card => {
+//     card.classList.remove("active", "layer-1", "layer-2", "layer-3")
+//   })
+
+//   const total = inner.value.length
+
+//   if (!total) return
+
+//   inner.value[current.value]?.classList.add("active")
+//   inner.value[(current.value + 1) % total]?.classList.add("layer-1")
+//   inner.value[(current.value + 2) % total]?.classList.add("layer-2")
+//   inner.value[(current.value + 3) % total]?.classList.add("layer-3")
+// }
+
+// function next() {
+//   current.value = (current.value + 1) % inner.value.length
+//   updateCarousel()
+// }
+
+// function prev() {
+//   current.value =
+//     (current.value - 1 + inner.value.length) % inner.value.length
+//   updateCarousel()
+// }
+
+// onMounted(() => {
+//   inner.value = document.querySelectorAll(".inner")
+//   updateCarousel()
+// }) 
+</script>
 
 <template>
 
@@ -6,12 +42,47 @@
     <header>
         <h3 class="rubik">members</h3>
     </header>
-    <div class="carousel-track">
+    <div class="carousel">
         <div class="inner">
-          <p id="name" class="lexend">Ray</p>
-          <p id="role" class="lexend">Web Designer, Coder</p>
+          <p id="name" class="lexend">Rafsun</p>
+          <p id="role" class="lexend">Touch Designer</p>
           <span>
-            <p id="task" class="lexend">Resona web design and coding</p>
+            <p id="task" class="lexend">Stage Visuals, Wayfinding and Ticketing Strategy</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Tyler</p>
+          <p id="role" class="lexend">Web Designer, Coder, Visual Creator</p>
+          <span>
+            <p id="task" class="lexend">BPM Web Design and Coding, Crowd Live Visualizer </p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Ann</p>
+          <p id="role" class="lexend">Graphic Designer, Video Editor</p>
+          <span>
+            <p id="task" class="lexend">BPM poster, Presentation Vid</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Remi</p>
+          <p id="role" class="lexend">Social Media Spokesperson, Video Editor</p>
+          <span>
+            <p id="task" class="lexend">Insta Post, Presentation Vid</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Kaisen</p>
+          <p id="role" class="lexend">Graphic Designer</p>
+          <span>
+            <p id="task" class="lexend">Resona logo</p>
+          </span>
+        </div>
+        <div class="inner">
+          <p id="name" class="lexend">Ibrahim</p>
+          <p id="role" class="lexend">Touch Designer</p>
+          <span>
+            <p id="task" class="lexend">Live Visuals</p>
           </span>
         </div>
         <div class="inner">
@@ -25,48 +96,13 @@
           <p id="name" class="lexend">Ray</p>
           <p id="role" class="lexend">Web Designer, Coder</p>
           <span>
-            <p id="task" class="lexend">Resona web design and coding</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Ray</p>
-          <p id="role" class="lexend">Web Designer, Coder</p>
-          <span>
-            <p id="task" class="lexend">Resona web design and coding</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Ray</p>
-          <p id="role" class="lexend">Web Designer, Coder</p>
-          <span>
-            <p id="task" class="lexend">Resona web design and coding</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Ray</p>
-          <p id="role" class="lexend">Web Designer, Coder</p>
-          <span>
-            <p id="task" class="lexend">Resona web design and coding</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Ray</p>
-          <p id="role" class="lexend">Web Designer, Coder</p>
-          <span>
-            <p id="task" class="lexend">Resona web design and coding</p>
-          </span>
-        </div>
-        <div class="inner">
-          <p id="name" class="lexend">Ray</p>
-          <p id="role" class="lexend">Web Designer, Coder</p>
-          <span>
-            <p id="task" class="lexend">Resona web design and coding</p>
+            <p id="task" class="lexend">Resona Web Design and Coding</p>
           </span>
         </div>
     </div>
     <div class="carousel-nav">
-        <button class="lexend"><</button>
-        <button class="lexend">></button>
+        <button class="lexend" @click="prev"><</button>
+        <button class="lexend" @click="next">></button>
     </div>
   </body>
 
@@ -84,6 +120,38 @@ div {
     text-align: center;
     justify-items: center;
 }
+
+// .carousel {
+//   position: relative;
+// }
+
+// .inner {
+//   position: absolute;
+// }
+
+// .active {
+//   transform: translateX(0) scale(1);
+//   z-index: 4;
+//   opacity: 1;
+// }
+
+// .layer-1 {
+//   transform: translateX(-25px) scale(0.96);
+//   z-index: 3;
+//   opacity: 1;
+// }
+
+// .layer-2 {
+//   transform: translateX(-50px) scale(0.92);
+//   z-index: 2;
+//   opacity: 1;
+// }
+
+// .layer-3 {
+//   transform: translateX(-75px) scale(0.88);
+//   z-index: 1;
+//   opacity: 1;
+// }
 
 #name {
   display: grid;
