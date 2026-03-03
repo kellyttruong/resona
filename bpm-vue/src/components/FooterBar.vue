@@ -9,6 +9,8 @@ const goToWebsite = () => {
 <main class="app-container">
     <section class="links glass">
         <p>Lineup</p>
+        <p>Location</p>
+        <p>2026 Tickets</p>
         <p @click="goToWebsite()">Powered by Resona</p>
     </section>
     <div class="img-container">
@@ -30,6 +32,12 @@ const goToWebsite = () => {
     .links {
         grid-column: span 2;
         text-align: right;
+
+        p {
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
     .img-container {
         grid-column: span 2;

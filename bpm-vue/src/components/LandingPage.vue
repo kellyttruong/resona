@@ -15,7 +15,7 @@
       <h3>Porter Robinson</h3>
     </section>
     <section class="buttons">
-      <button>2026 Tickets</button>
+      <a href="">2026 Tickets</a>
       <a href="#lineup">Full Lineup</a>
     </section>
   </main>
