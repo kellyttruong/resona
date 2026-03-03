@@ -40,4 +40,15 @@ a:hover img {
 #blo {
     width: 400px;
 }
+
+@media screen and (min-width: 1080px) {
+    .mmi {
+        grid-column: 2;
+        width: 400px;
+    }
+    .bpm {
+        grid-column: 4;
+        width: 600px;
+    }
+}
 </style>

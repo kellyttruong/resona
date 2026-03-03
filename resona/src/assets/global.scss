@@ -51,4 +51,10 @@ body {
        grid-template-columns: repeat(5, 1fr);
        grid-template-rows: 20vh;
     }
+    header {
+       grid-column: 5; 
+    }
+    header h3 {
+        font-size: 40px;
+    }
  }

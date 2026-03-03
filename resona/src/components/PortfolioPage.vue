@@ -6,19 +6,19 @@
     <header>
         <h3 class="rubik">portfolio</h3>
     </header>
-    <div>
+    <div class="left">
         <video src="../assets/Motion Concept 1.mp4" controls poster>motion concept 1</video>
         <figcaption class="lexend">description</figcaption>
     </div>
-    <div>
+    <div class="right">
         <video src="../assets/Motion Concept 2.mp4" controls poster>motion concept 1</video>
         <figcaption class="lexend">description</figcaption>
     </div>
-    <div>
+    <div class="left">
         <video src=""></video>
         <figcaption class="lexend">description</figcaption>
     </div>
-     <div>
+     <div class="right">
         <video src=""></video>
         <figcaption class="lexend">description</figcaption>
     </div>
@@ -57,5 +57,21 @@ video {
   background-clip: padding-box, border-box;
 
   box-shadow: 0 0 12px rgba(143, 4, 16);
+}
+
+@media screen and (min-width: 1080px) {
+    video {
+        width: 500px;
+    }
+    .left {
+        grid-column: 2;
+    }
+    .right {
+        grid-column: 4;
+        margin-top: 170px;
+    }
+    .left figcaption, .right figcaption {
+        grid-column: 3;
+    }
 }
 </style>
