@@ -104,7 +104,7 @@
 
 @media screen and (min-width: 1080px) {
     .app-container {
-        height: auto;
+        grid-template-columns: repeat(4, 1fr);
     }
     .title {
         grid-column: span 5;
@@ -126,7 +126,7 @@
         grid-column: 2;
     }
     .vision {
-        grid-column: 4;
+        grid-column: 3;
     }
     .mission h3, .vision h3 {
         font-size: 30px;

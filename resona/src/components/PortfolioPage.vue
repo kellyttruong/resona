@@ -60,18 +60,29 @@ video {
 }
 
 @media screen and (min-width: 1080px) {
+    .app-container {
+        gap: 5rem;
+    }
     video {
         width: 500px;
     }
     .left {
-        grid-column: 2;
+        grid-column: 2 / span 2;
     }
     .right {
-        grid-column: 4;
-        margin-top: 170px;
+        grid-column: 3 / span 2;
     }
-    .left figcaption, .right figcaption {
-        grid-column: 3;
+    .right video{
+        grid-column: 2;
+    }
+    .left, .right{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+   .right figcaption {
+        grid-column: 1;
+        grid-row: 1;
     }
 }
 </style>
