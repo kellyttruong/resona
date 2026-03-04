@@ -39,14 +39,15 @@ const prev = () => {
     </div>
 
     <div class="carousel-nav">
-      <button class="lexend" @click="prev"><</button>
-      <button class="lexend" @click="next">></button>
+      <button class="lexend" id="prev" @click="prev"><</button>
+      <button class="lexend" id="next" @click="next">></button>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .app-container {
+  height: auto;
   display: grid;
   justify-items: center;
   margin-bottom: 30px;
@@ -115,14 +116,26 @@ const prev = () => {
   background-clip: padding-box, border-box;
 
   box-shadow: 0 0 12px rgba(143, 4, 16);
+
+  justify-self: center;
+  width: 50px;
 }
+
 
 @media screen and (min-width: 1080px) {
   .carousel, .carousel-nav {
     grid-column: 2 / span 3;
   }
+  .carousel {
+    grid-row: 2;
+  }
   .carousel-nav {
     grid-row: 3;
+    justify-items: right;
+  }
+  header {
+    position: absolute;
+    right: 0;
   }
 }
 </style>

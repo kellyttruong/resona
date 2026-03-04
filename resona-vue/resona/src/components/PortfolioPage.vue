@@ -8,19 +8,23 @@
     </header>
     <div class="left">
         <video src="../assets/Motion Concept 1.mp4" controls poster>motion concept 1</video>
-        <figcaption class="lexend">description</figcaption>
+        <figcaption class="lexend">Stage Visual #1</figcaption>
     </div>
     <div class="right">
         <video src="../assets/Motion Concept 2.mp4" controls poster>motion concept 1</video>
-        <figcaption class="lexend">description</figcaption>
+        <figcaption class="lexend">Stage Visual #2</figcaption>
     </div>
     <div class="left">
-        <video src=""></video>
-        <figcaption class="lexend">description</figcaption>
+        <video src="../assets/neonsphere.mp4" controls poster>motion concept 3</video>
+        <figcaption class="lexend">Live Visual #1</figcaption>
     </div>
      <div class="right">
-        <video src=""></video>
-        <figcaption class="lexend">description</figcaption>
+        <video src="../assets/particlewaves.mp4" controls poster>motion concept 4</video>
+        <figcaption class="lexend">Live Visual #2</figcaption>
+    </div>
+      <div class="left">
+        <video src="../assets/flyingsquares.mp4" controls poster>motion concept 3</video>
+        <figcaption class="lexend">Live Visual #3</figcaption>
     </div>
   </body>
 

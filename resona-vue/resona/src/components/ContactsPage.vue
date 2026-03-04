@@ -58,10 +58,10 @@ a.lexend {
 }
 
 footer {
-    
     grid-column: span 2;
     margin-top: 10px;
     background-color: #8f0410;
+    padding: 20px;
 }
 
 a, p {
@@ -73,7 +73,6 @@ a, p {
     grid-row: 2;
     grid-column: 2;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 div .help {
@@ -91,12 +90,49 @@ div .about {
     grid-column: 3;
     justify-self: right;
 }
+
 .app-container {
     height: auto;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
-    padding: 20px;
 }
+ 
+@media screen and (min-width: 1080px) {
+      .app-container {
+        grid-template-columns: repeat(5, 1fr);
+        padding: 10px;
+    }
 
+    #tv {
+        grid-column: 3;
+        grid-column: span 5;
+        width: 700px;
+    }
+    
+    header {
+        grid-column: 5;
+    }
+
+    .help {
+      grid-column: 4;  
+    }
+
+    .about {
+        grid-column: 5;
+    }
+
+    #copy {
+        grid-column: 1;
+        justify-self: left;
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        grid-column: 5;
+        width: 200px;
+    }
+}
 
 </style>

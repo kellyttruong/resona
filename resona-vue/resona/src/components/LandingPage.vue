@@ -141,6 +141,7 @@ const closeMenu = () => {
 @media screen and (min-width: 1080px) {
     .app-container {
         grid-template-columns: repeat(4, 1fr);
+        height: auto;
     }
     .title {
         grid-column: span 5;
@@ -155,10 +156,17 @@ const closeMenu = () => {
         width: 300px;
     }
     .mission {
-        grid-column: 2;
+        grid-column: 1;
+        grid-column: span 2;
+        height: 200px;
+        margin-left: 30px;
+        place-content: center;
     }
     .vision {
         grid-column: 3;
+        grid-column: span 2;
+        height: 200px;
+        place-content: center;
     }
     .mission h3, .vision h3 {
         font-size: 30px;
