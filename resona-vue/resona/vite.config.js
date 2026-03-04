@@ -11,7 +11,7 @@ export default defineConfig({
     vueDevTools(),
   ],
   build: {
-    outDir: '../public_html',
+    outDir: '../../public_html',
   },
   resolve: {
     alias: {
